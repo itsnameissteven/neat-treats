@@ -22,6 +22,10 @@ jobs:
 
       - name: Install Dependencies
         run: yarn
+      - name: Test
+        run: echo ${{secrets.GH_TOKEN}}
+      - name: test2
+        run: echo ${{secrets.NPM_TOKEN }}
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
