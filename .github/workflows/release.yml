@@ -22,12 +22,7 @@ jobs:
 
       - name: Install Dependencies
         run: yarn
-      - name: Test
-        run: echo ${{secrets.GH_TOKEN}}
-      - name: test2
-        run: echo ${{secrets.NPM_TOKEN }}
-      - name: test3
-        run: echo  ${{secrets.NP_TOKEN }} | sed 's/./& /g'
+        
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
