@@ -1,4 +1,4 @@
-import { forwardRef, memo } from 'react';
+import React, { forwardRef, memo } from 'react';
 import { Element } from '.';
 
 export type InputProps = GenericComponentProps<'input'> & {
