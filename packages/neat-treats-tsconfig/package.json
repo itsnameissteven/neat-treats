@@ -1,7 +1,7 @@
 {
   "name": "@neat-treats/tsconfig",
-  "version": "beta-0.0.0",
-  "private": true,
+  "version": "0.0.0-beta",
+  "private": false,
   "license": "MIT",
   "publishConfig": {
     "access": "public"
