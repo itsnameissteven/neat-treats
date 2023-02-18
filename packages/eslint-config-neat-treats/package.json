@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-neat-treats",
-  "version": "beta-0.0.0",
+  "version": "0.0.0-beta",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
