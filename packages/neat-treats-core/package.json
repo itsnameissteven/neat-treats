@@ -28,5 +28,10 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "postcss": "^8.4.21",
+    "sass": "^1.58.3",
+    "sass-loader": "^13.2.0"
   }
 }

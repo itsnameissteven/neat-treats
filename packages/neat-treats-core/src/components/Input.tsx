@@ -1,5 +1,5 @@
 import React, { forwardRef, memo } from 'react';
-import { Element } from '.';
+import { Element } from '..';
 
 export type InputProps = GenericComponentProps<'input'> & {
   isError?: boolean;

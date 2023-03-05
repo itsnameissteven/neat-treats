@@ -1,5 +1,5 @@
 import React from 'react';
-import { Element } from '.';
+import { Element } from '..';
 import { classNames } from '@neat-treats/utils';
 
 // Interfaces and Types
