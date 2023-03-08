@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import '../.storybook/index.scss';
 import { Icon } from '@neat-treats/core/src';
 
 export default {
@@ -65,7 +65,7 @@ const allIcons = (color: string, size: number) =>
       >
         <p
           className="icon__name"
-          style={{ marginBottom: '16px', fontSize: '18px' }}
+          style={{ marginBottom: '12px', fontSize: '14px' }}
         >
           {name}
         </p>
@@ -84,4 +84,8 @@ const Template = ({ color, size }) => {
   );
 };
 
-export const Primary = Template.bind({});
+export const Collection = Template.bind({});
+Collection.args = {
+  color: '#000',
+  size: '24px',
+};

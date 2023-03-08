@@ -5,3 +5,4 @@ export { classNames } from './classNames';
 export { useBodyLock } from './useBodyLock';
 export { useCopyText } from './useCopyText';
 export { useOnOutsideClick } from './useOnOutsideClick';
+export { usePreventAnimation } from './usePreventAnimation';

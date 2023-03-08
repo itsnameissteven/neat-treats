@@ -1,5 +1,5 @@
 import React from 'react';
-import { classNames } from '@neat-treats/utils';
+import { icons } from './icons';
 
 export type NTIconProps = {
   name: string;
@@ -10,7 +10,7 @@ export type NTIconProps = {
   disabled?: boolean;
 };
 
-const Icon = ({
+export const Icon = ({
   name,
   size,
   color,
@@ -28,13 +28,9 @@ const Icon = ({
     })
     .join('');
   try {
-    Component = require(`../../icons/${iconName}.js`).default;
+    Component = icons[iconName];
   } catch {
-    try {
-      Component = require(`../../icons/${iconName}.tsx`).default;
-    } catch {
-      console.log(`Icon ${name} does not exist.`);
-    }
+    console.log(`Icon ${name} does not exist.`);
   }
 
   if (!Component) {
@@ -61,7 +57,6 @@ const Icon = ({
       </button>
     );
   }
+
   return <CreatedItem />;
 };
-
-export default Icon;

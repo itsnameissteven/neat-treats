@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 
-interface PreventAnimationArgs {
+export type PreventAnimationArgs = {
   timeout?: number;
-  secondaryBoolean?: boolean;
-}
-const usePreventAnimation = ({
+  preventAnimation?: boolean;
+};
+export const usePreventAnimation = ({
   timeout = 500,
-  secondaryBoolean = false,
+  preventAnimation = false,
 }: PreventAnimationArgs = {}) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -16,9 +16,7 @@ const usePreventAnimation = ({
 
   return {
     isLoaded,
-    noAnimation: !isLoaded || secondaryBoolean ? 'no-animation' : '',
-    noTransition: !isLoaded || secondaryBoolean ? 'no-transition' : '',
+    noAnimationClass: !isLoaded || preventAnimation ? 'no-animation' : '',
+    noTransitionClass: !isLoaded || preventAnimation ? 'no-transition' : '',
   };
 };
-
-export default usePreventAnimation;
