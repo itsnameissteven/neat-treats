@@ -3,7 +3,7 @@ import { classNames } from '@neat-treats/utils/src';
 import { usePreventAnimation } from '@neat-treats/utils/src';
 import './Hamburger.scss';
 
-interface IHamburger {
+export type NTHamburgerProps = {
   size?: string;
   className?: string;
   onClick?: () => void;
@@ -18,9 +18,9 @@ interface IHamburger {
     right: string;
   };
   isActive: boolean;
-}
+};
 
-const Hamburger = ({
+export const Hamburger = ({
   size = '30px',
   className,
   onClick = () => null,
@@ -31,7 +31,7 @@ const Hamburger = ({
   zIndex,
   position,
   isActive,
-}: IHamburger) => {
+}: NTHamburgerProps) => {
   const { noAnimationClass } = usePreventAnimation();
 
   const topClass = classNames('hamburger__top', {
@@ -143,5 +143,3 @@ const Hamburger = ({
     </svg>
   );
 };
-
-export default Hamburger;

@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@neat-treats/tsconfig": "workspace:*",
+    "@neat-treats/utils": "workspace:*",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-docs": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",

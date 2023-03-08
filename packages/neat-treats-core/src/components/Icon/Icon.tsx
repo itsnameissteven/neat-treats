@@ -26,7 +26,7 @@ export const Icon = ({
     .map((string) => {
       return string.charAt(0).toUpperCase() + string.slice(1);
     })
-    .join('');
+    .join('') as keyof typeof icons;
   try {
     Component = icons[iconName];
   } catch {

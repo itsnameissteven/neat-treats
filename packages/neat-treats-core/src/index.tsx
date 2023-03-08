@@ -5,4 +5,15 @@ export { Input, type NTInputProps } from './components/Input/Input';
 export { Textarea, type NTTextareaProps } from './components/Textarea/Textarea';
 export { Select, type NTSelectProps } from './components/Select/Select';
 export { Icon, type NTIconProps } from './components/Icon/Icon';
-export { default } from './components/Icon/icons/ArrowCircleDown';
+export {
+  Hamburger,
+  type NTHamburgerProps,
+} from './components/Hamburger/Hamburger';
+export {
+  DarkModeButton,
+  type NTDarkModeButtonProps,
+} from './components/DarkModeButton/DarkModeButton';
+export {
+  CodeBlock,
+  type NTCodeBlockProps,
+} from './components/CodeBlock/CodeBlock';
