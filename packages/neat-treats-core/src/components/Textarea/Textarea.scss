@@ -1,0 +1,17 @@
+@use '../../styles/' as *;
+
+.nt-textarea {
+  @include genericInput;
+  padding: 8px 8px;
+  height: 150px;
+  @include inputBorder;
+  &--error {
+    @include errorBorder;
+  }
+}
+.nt-textarea-container{
+  @include flexColumn;
+  label{
+    @include label;
+  }
+}

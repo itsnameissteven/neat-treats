@@ -1,4 +1,6 @@
 import * as React from 'react';
-export { Element } from './Element';
-export { Button, type ButtonProps } from './Button';
-export { Input, type InputProps } from './Input';
+export { Element } from './components/Element/Element';
+export { Button, type NTButtonProps } from './components/Button/Button';
+export { Input, type NTInputProps } from './components/Input/Input';
+export { Textarea, type NTTextareaProps } from './components/Textarea/Textarea';
+export { Select, type NTSelectProps } from './components/Select/Select';

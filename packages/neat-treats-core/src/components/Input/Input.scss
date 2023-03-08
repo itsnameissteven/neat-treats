@@ -1,0 +1,16 @@
+@use '../../styles/' as *;
+
+.nt-input {
+  @include genericInput;
+  @include inputBorder;
+  &--error {
+    @include errorBorder;
+  }
+}
+
+.nt-input-container {
+  @include flexColumn;
+  label {
+    @include label;
+  }
+}

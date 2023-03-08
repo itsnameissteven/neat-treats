@@ -14,15 +14,16 @@ export const classNames = <
       }
       return acc;
     }, [] as string[]);
-
     values.push(...trueClassNames);
   };
+
   if (typeof first === 'string') {
     values.push(first);
-  } else if (isObj(first)) {
+  }
+  if (isObj(first)) {
     getClassNamesFromObj(first);
   } else if (isObj(second)) {
     getClassNamesFromObj(second);
   }
-  return values.join(' ');
+  return values.join(' ').trim();
 };

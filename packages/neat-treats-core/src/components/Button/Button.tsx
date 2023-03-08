@@ -1,14 +1,13 @@
 import React from 'react';
-import { Element } from '.';
+import { Element } from '../..';
+import './Button.scss';
 
-// Interfaces and Types
-
-export type ButtonProps = GenericComponentProps<'button'>;
+export type NTButtonProps = GenericComponentProps<'button'>;
 
 export const Button = React.memo(
   React.forwardRef(
     (
-      { className = '', children, ...props }: ButtonProps,
+      { className = '', children, ...props }: NTButtonProps,
       ref?: PolymorphicRef<'button'>
     ) => {
       return (

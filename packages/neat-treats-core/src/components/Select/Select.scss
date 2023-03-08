@@ -1,0 +1,21 @@
+@use '../../styles/' as *;
+
+.nt-select {
+  @include genericInput;
+  @include inputBorder;
+  text-transform: capitalize;
+
+  &--empty {
+    color: gray
+  }
+  &--error {
+    @include errorBorder;
+  }
+}
+
+.nt-select-container {
+  @include flexColumn;
+  label {
+    @include label;
+  }
+}
