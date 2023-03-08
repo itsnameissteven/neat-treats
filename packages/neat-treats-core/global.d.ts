@@ -22,3 +22,11 @@ type PolymorphicComponent = <C extends React.ElementType = 'span'>(
 
 type PolymorphicRef<C extends React.ElementType = 'span'> =
   React.ComponentPropsWithRef<C>['ref'];
+
+// replace with generic
+type IIcon = {
+  size?: number;
+  className?: string;
+  color?: string;
+  [x: string]: any;
+};
