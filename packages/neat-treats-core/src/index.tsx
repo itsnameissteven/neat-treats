@@ -17,3 +17,7 @@ export {
   CodeBlock,
   type NTCodeBlockProps,
 } from './components/CodeBlock/CodeBlock';
+export {
+  ActionButton,
+  type NTActionButtonProps,
+} from './components/ActionButton/ActionButton';

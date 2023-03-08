@@ -1,8 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import { usePreventAnimation } from '@neat-treats/utils';
 import { Icon } from '../Icon/Icon';
+import './ActionButton.scss';
 
-export type NTActionButton = {
+export type NTActionButtonProps = {
   size?: number;
   stroke?: number;
   onClick?: () => void;
@@ -15,7 +16,7 @@ export type NTActionButton = {
   children?: JSX.Element | string;
 };
 
-const ActionButton = ({
+export const ActionButton = ({
   size = 50,
   stroke = 2,
   border = 'grey',
@@ -26,7 +27,7 @@ const ActionButton = ({
   iconSize,
   className = '',
   onClick,
-}: NTActionButton) => {
+}: NTActionButtonProps) => {
   const circleRef = useRef<SVGCircleElement>(null);
   const { noAnimationClass } = usePreventAnimation();
 
@@ -99,5 +100,3 @@ const ActionButton = ({
     </button>
   );
 };
-
-export default ActionButton;

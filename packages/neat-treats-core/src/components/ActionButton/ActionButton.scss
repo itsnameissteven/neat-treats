@@ -1,0 +1,48 @@
+@use '../../styles/' as *;
+
+.action-btn {
+  position: relative;
+  border-radius: 100%;
+
+  &__progress-ring {
+    transform: rotate(-90deg);
+    &__circle {
+      transition: stroke-dashoffset 0.35s ease-in;
+    }
+
+    &:hover + .animation-up {
+      animation: up 0.5s ease-out forwards;
+    }
+    &:hover + .animation-down {
+      animation: down 0.5s ease-out forwards;
+    }
+    &:hover + .animation-left {
+      animation: left 0.5s ease-out forwards;
+    }
+    &:hover + .animation-right {
+      animation: right 0.5s ease-out forwards;
+    }
+  }
+
+  .animation-up {
+    animation: upReverse 0.3s ease forwards;
+  }
+
+  .animation-down {
+    animation: downReverse 0.3s ease forwards;
+  }
+  .animation-left {
+    animation: leftReverse 0.3s ease forwards;
+  }
+  .animation-right {
+    animation: rightReverse 0.3s ease forwards;
+  }
+
+  &__content {
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
