@@ -2,8 +2,6 @@ import React from 'react';
 import { Element } from '../..';
 import './Button.scss';
 
-// Interfaces and Types
-
 export type NTButtonProps = GenericComponentProps<'button'>;
 
 export const Button = React.memo(

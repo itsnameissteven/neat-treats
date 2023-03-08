@@ -1,12 +1,7 @@
 @use '../../styles/' as *;
 
 .nt-input {
-  display: block;
-  margin-bottom: 1em;
-  width: 100%;
-  max-width: 500px;
-  height: 40px;
-  padding: 0 8px;
+  @include genericInput;
   @include inputBorder;
   &--error {
     @include errorBorder;

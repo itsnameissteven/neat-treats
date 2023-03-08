@@ -86,7 +86,14 @@ $tablet-width: 1024px;
     outline-offset: -2px;
   }
 }
-
+@mixin genericInput {
+  display: block;
+  margin-bottom: 1em;
+  width: 100%;
+  max-width: 500px;
+  height: 40px;
+  padding: 0 8px;
+}
 @mixin label {
     margin-bottom: .5em;
     padding-left: 4px;

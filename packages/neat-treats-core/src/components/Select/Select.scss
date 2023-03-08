@@ -1,17 +1,21 @@
 @use '../../styles/' as *;
 
-.nt-textarea {
+.nt-select {
   @include genericInput;
-  padding: 8px 8px;
-  height: 150px;
   @include inputBorder;
+  text-transform: capitalize;
+
+  &--empty {
+    color: gray
+  }
   &--error {
     @include errorBorder;
   }
 }
-.nt-textarea-container{
+
+.nt-select-container {
   @include flexColumn;
-  label{
+  label {
     @include label;
   }
 }
