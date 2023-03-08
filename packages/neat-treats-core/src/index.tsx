@@ -21,3 +21,7 @@ export {
   ActionButton,
   type NTActionButtonProps,
 } from './components/ActionButton/ActionButton';
+export {
+  ProgressRing,
+  type NTProgressRingProps,
+} from './components/ProgressRing/ProgressRing';
