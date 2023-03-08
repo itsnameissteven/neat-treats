@@ -40,7 +40,7 @@ const Template = (args) => {
   return (
     <div className={`dark-mode-demo ${noTransitionClass}`}>
       <div className="dark-mode-demo__header">
-        <h1>Dark Mode Button Demo</h1>
+        <h1>{'Dark Mode Button Demo    ----->'}</h1>
         <DarkModeButton {...args} />
       </div>
       <p className="dark-mode-demo__about">
