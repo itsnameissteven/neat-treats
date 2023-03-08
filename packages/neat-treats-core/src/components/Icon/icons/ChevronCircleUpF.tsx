@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ChevronCircleUpF = ({ size = 48, color = '#000', ...props }: IIcon) => {
+const ChevronCircleUpF = ({ size = 48, color = '#000', ...props }: NTIcon) => {
   return (
     <svg
       width={size}

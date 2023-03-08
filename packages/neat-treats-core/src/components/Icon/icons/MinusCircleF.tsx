@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MinusCircleF = ({ size = 48, color = 'black', ...props }: IIcon) => {
+const MinusCircleF = ({ size = 48, color = 'black', ...props }: NTIcon) => {
   return (
     <svg
       width={size}

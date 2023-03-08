@@ -4,7 +4,7 @@ const ChevronCircleRight = ({
   size = 48,
   color = 'black',
   ...props
-}: IIcon) => {
+}: NTIcon) => {
   return (
     <svg
       width={size}

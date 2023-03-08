@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { IIcon } from '../types';
+import { NTIcon } from '../types';
 
-const ShoppingCart = ({ size = 48, color = 'black', ...props }: IIcon) => {
+const ShoppingCart = ({ size = 48, color = 'black', ...props }: NTIcon) => {
   return (
     <svg
       width={size}

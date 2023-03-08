@@ -24,9 +24,8 @@ type PolymorphicRef<C extends React.ElementType = 'span'> =
   React.ComponentPropsWithRef<C>['ref'];
 
 // replace with generic
-type IIcon = {
+type NTIcon = React.ElementType<'svg'> & {
   size?: number;
   className?: string;
   color?: string;
-  [x: string]: any;
 };
