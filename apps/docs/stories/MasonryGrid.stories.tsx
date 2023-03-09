@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import { MasonryGrid } from '@neat-treats/core/src';
 
@@ -37,7 +37,7 @@ const Template = (args) => {
         maxWidth prop to prevent continued rendering once the window reaches a
         certain width.
       </p>
-      <MasonryGrid>
+      <MasonryGrid {...args}>
         {mockData.map((text, i) => {
           return (
             <div

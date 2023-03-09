@@ -4,12 +4,14 @@ export type NTMasonryGridProps = {
   children: JSX.Element[];
   minWidth?: number;
   maxWidth?: number;
+  gridGap?: string;
 };
 
 export const MasonryGrid = ({
   children,
   minWidth = 750,
   maxWidth = 1200,
+  gridGap,
 }: NTMasonryGridProps) => {
   const [width, setWidth] = useState(0);
 
@@ -56,7 +58,7 @@ export const MasonryGrid = ({
   }, [width]);
 
   return (
-    <div className="masonry-grid">
+    <div className="masonry-grid" style={gridGap ? { gridGap } : {}}>
       {Children.map(children, (child) => {
         return cloneElement(child, {
           className: `${child.props.className} masonry-grid__child`,
