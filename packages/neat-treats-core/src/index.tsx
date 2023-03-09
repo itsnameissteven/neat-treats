@@ -29,3 +29,7 @@ export {
   MasonryGrid,
   type NTMasonryGridProps,
 } from './components/MasonryGrid/MasonryGrid';
+export {
+  ProgressBar,
+  type NTProgressBarProps,
+} from './components/ProgressBar/ProgressBar';

@@ -1,0 +1,8 @@
+.progress-bar {
+  border-radius: 50px;
+  &__inner {
+    border-radius: 50px;
+    transition: all 0.5s ease-in;
+    height: 100%;
+  }
+}
