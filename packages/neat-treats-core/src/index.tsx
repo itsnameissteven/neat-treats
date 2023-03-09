@@ -25,3 +25,7 @@ export {
   ProgressRing,
   type NTProgressRingProps,
 } from './components/ProgressRing/ProgressRing';
+export {
+  MasonryGrid,
+  type NTMasonryGridProps,
+} from './components/MasonryGrid/MasonryGrid';

@@ -1,0 +1,16 @@
+.masonry-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-auto-rows: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 356px));
+  grid-auto-flow: row;
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: 60px;
+}
+.masonry-grid__child {
+  background: #002133;
+  height: fit-content;
+  min-height: fit-content;
+  border-radius: 4px;
+}
