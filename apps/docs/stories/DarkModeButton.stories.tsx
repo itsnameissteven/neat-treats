@@ -1,7 +1,6 @@
 import React from 'react';
 import { CodeBlock, DarkModeButton } from '@neat-treats/core/src';
 import { usePreventAnimation } from '@neat-treats/utils/src';
-import '../.storybook/index.scss';
 
 export default {
   component: DarkModeButton,

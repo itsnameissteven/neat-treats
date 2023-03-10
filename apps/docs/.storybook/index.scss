@@ -24,7 +24,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     row-gap: 20px;
-    width:100%;
+    width: 100%;
   }
   &__hamburger {
     background: #fff;
@@ -79,6 +79,12 @@
     &__header {
       border-bottom: 2px solid #4b4c52;
     }
+  }
+}
+
+.spacer-story {
+  p {
+    display: inline;
   }
 }
 
