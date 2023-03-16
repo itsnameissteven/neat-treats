@@ -57,8 +57,11 @@ $tablet-width: 1024px;
   }
 }
 
-@mixin fade($time: 200ms) {
+@mixin fadeIn($time: 200ms) {
   animation: fadeIn $time ease-in;
+}
+@mixin fadeOut($time: 200ms) {
+  animation: fadeOut $time ease-in;
 }
 
 @mixin boxShaddow($opacity: -0.8) {

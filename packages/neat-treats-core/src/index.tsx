@@ -37,3 +37,4 @@ export {
   ImageUpload,
   type NTImageUploadProps,
 } from './components/ImageUpload/ImageUpload';
+export { Modal, type NTModalProps } from './components/Modal/Modal';
