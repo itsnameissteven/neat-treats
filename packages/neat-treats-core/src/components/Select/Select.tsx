@@ -31,14 +31,14 @@ export const Select = React.memo(
       );
       // Return
       return (
-        <div className="nt-select-container">
+        <div className={`nt-select-container ${className}`}>
           {label && <label htmlFor={props?.id || id}>{label}</label>}
           <Element
             ref={ref}
             {...props}
             id={props?.id || id}
             as="select"
-            className={classNames(`nt-select ${className}`, {
+            className={classNames(`nt-select`, {
               ['nt-select--error']: isError,
               ['nt-select--empty']: !props.value,
             })}

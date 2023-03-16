@@ -22,14 +22,14 @@ export const Textarea = React.memo(
     ) => {
       const id = useId();
       return (
-        <div className="nt-textarea-container">
+        <div className={`nt-textarea-container  ${className}`}>
           {label && <label htmlFor={props?.id || id}>{label}</label>}
           <Element
             as="textarea"
             {...props}
             id={props.id || id}
             ref={ref}
-            className={classNames(`nt-textarea ${className}`, {
+            className={classNames(`nt-textarea`, {
               ['nt-textarea--error']: isError,
             })}
           >

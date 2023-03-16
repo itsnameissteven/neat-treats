@@ -33,3 +33,7 @@ export {
 export { Select, type NTSelectProps } from './components/Select/Select';
 export { Spacer, type NTSpacerProps } from './components/Spacer/Spacer';
 export { Textarea, type NTTextareaProps } from './components/Textarea/Textarea';
+export {
+  FileUpload,
+  type NTFileUploadProps,
+} from './components/FileUpload/FileUpload';
