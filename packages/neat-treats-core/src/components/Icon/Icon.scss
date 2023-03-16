@@ -1,4 +1,6 @@
 .nt-icon-btn {
+  min-width: fit-content;
+  min-height: fit-content;
   &:hover {
     cursor: pointer;
   }
