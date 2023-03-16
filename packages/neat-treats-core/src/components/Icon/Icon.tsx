@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { icons } from './icons';
 import './Icon.scss';
 
 export type NTIconProps = {
-  name: string;
+  name: PascalToKebab<keyof typeof icons>;
   color?: string;
   size?: number;
   className?: string;
@@ -54,10 +54,16 @@ export const Icon = ({
         className={`${'nt-icon'} ${`nt-icon-btn`} ${className}`}
         disabled={disabled}
       >
-        <CreatedItem />
+        <Suspense fallback={null}>
+          <CreatedItem />
+        </Suspense>
       </button>
     );
   }
 
-  return <CreatedItem />;
+  return (
+    <Suspense fallback={null}>
+      <CreatedItem />
+    </Suspense>
+  );
 };

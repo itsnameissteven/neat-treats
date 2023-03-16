@@ -2,9 +2,9 @@ import { useDebounce } from '@neat-treats/utils';
 import React, { useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { classNames } from '@neat-treats/utils';
+import { Icon } from '../Icon/Icon';
 import './Modal.scss';
 import { useOnOutsideClick } from '@neat-treats/utils/src';
-
 export type NTModalProps = {
   className?: string;
   children: React.ReactNode;
@@ -33,7 +33,15 @@ export const Modal = ({
         'nt-modal-backdrop--out': !isOpen && debouncedIsOpen,
       })}
     >
-      <div className={`nt-modal ${className}`}>{children}</div>
+      <div className={`nt-modal ${className}`}>
+        {children}
+        <Icon
+          className="nt-modal__close-btn"
+          name="x"
+          onClick={onClose}
+          size={20}
+        />
+      </div>
     </div>
   );
 

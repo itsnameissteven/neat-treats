@@ -55,20 +55,18 @@ export const ImageUpload = ({
       </label>
       <div className="nt-file-upload-selection">
         {srcs.map(({ url, id, name }) => (
-          <Suspense fallback={null} key={id}>
-            <div className="nt-image-container">
-              <div className="nt-image">
-                <img src={url} />
-              </div>
-              <p>{name}</p>
-              <Icon
-                className="nt-image-icon"
-                name="x-circle-f"
-                size={12}
-                onClick={() => setFiles((el) => filterById(el, id, false))}
-              />
+          <button className="nt-image-container" key={id}>
+            <div className="nt-image">
+              <img src={url} alt={name} />
             </div>
-          </Suspense>
+            <p>{name}</p>
+            <Icon
+              className="nt-image-icon"
+              name="x-circle-f"
+              size={12}
+              onClick={() => setFiles((el) => filterById(el, id, false))}
+            />
+          </button>
         ))}
       </div>
     </div>
