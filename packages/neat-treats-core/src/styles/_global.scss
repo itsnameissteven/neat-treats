@@ -1,5 +1,33 @@
-* {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  box-sizing: border-box;
+// * {
+//   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+//     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+//   box-sizing: border-box;
+// }
+
+.no-animation {
+  animation-duration: 0s !important;
+  * {
+    animation-duration: 0s !important;
+  }
 }
+
+.no-transition {
+  transition-duration: 0s !important;
+  * {
+    transition-duration: 0s !important;
+  }
+}
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+// }
+
+// button {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background: rgba(0, 0, 0, 0);
+//   border: none;
+//   padding: 0;
+// }

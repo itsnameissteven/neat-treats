@@ -22,3 +22,24 @@ type PolymorphicComponent = <C extends React.ElementType = 'span'>(
 
 type PolymorphicRef<C extends React.ElementType = 'span'> =
   React.ComponentPropsWithRef<C>['ref'];
+
+// replace with generic
+type NTIcon = React.ElementType<'svg'> & {
+  size?: number;
+  className?: string;
+  color?: string;
+};
+
+type Kebab<
+  T extends string,
+  A extends string = ''
+> = T extends `${infer First}${infer Rest}`
+  ? Kebab<
+      Rest,
+      `${A}${First extends Lowercase<First> ? '' : '-'}${Lowercase<First>}`
+    >
+  : A;
+
+type PascalToKebab<T extends string> = T extends `${infer First}${infer Rest}`
+  ? Kebab<`${Lowercase<First>}${Rest}`>
+  : Kebab<T>;

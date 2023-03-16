@@ -4,9 +4,12 @@
   @include genericInput;
   @include inputBorder;
   text-transform: capitalize;
-
+  appearance: none;
+  background: url('../../assets/chevron-down.svg') no-repeat;
+  background-position: 98% 50%;
+  color: black;
   &--empty {
-    color: gray
+    color: gray;
   }
   &--error {
     @include errorBorder;

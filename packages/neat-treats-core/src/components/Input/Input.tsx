@@ -17,14 +17,14 @@ export const Input = React.memo(
     ) => {
       const id = useId();
       return (
-        <div className="nt-input-container">
+        <div className={`nt-input-container ${className}`}>
           {label && <label htmlFor={props?.id || id}>{label}</label>}
           <Element
             ref={ref}
             {...props}
             as="input"
             id={props?.id || id}
-            className={classNames(`nt-input ${className}`, {
+            className={classNames(`nt-input`, {
               ['nt-input--error']: isError,
             })}
           />

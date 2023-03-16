@@ -1,0 +1,96 @@
+.story {
+  &__h1 {
+    margin: 24px 0;
+  }
+  &__p {
+    width: 75%;
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  &__action-btn {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    height: 200px;
+    border-radius: 4px;
+    padding: 30px;
+  }
+  a {
+    color: rgb(127, 127, 231);
+    text-decoration: none;
+  }
+  &__icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    row-gap: 20px;
+    width: 100%;
+  }
+  &__hamburger {
+    background: #fff;
+    height: 200px;
+    border-radius: 4px;
+    padding: 30px;
+  }
+}
+
+.white-backing {
+  height: 400px;
+  background: #fff;
+  color: #000;
+  padding: 20px;
+}
+
+.incrementor-story {
+  font-size: 14px;
+}
+
+// dark mode demo
+
+.dark-mode-demo {
+  padding: 20px;
+  height: fit-content;
+  width: 100%;
+  background: #fff;
+  transition: all 0.3s ease-out;
+  color: #1f2028;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px 16px;
+    border-bottom: 2px solid #ced1d4;
+  }
+  &__about {
+    max-width: 700px;
+    line-height: 1.4;
+    margin: 0 0 20px 20px;
+  }
+  &__code {
+    margin: 0 20px;
+  }
+}
+// dark mode styles
+.dark-mode {
+  .dark-mode-demo {
+    background: #1f2028;
+    color: #fff;
+    &__header {
+      border-bottom: 2px solid #4b4c52;
+    }
+  }
+}
+
+.spacer-story {
+  p {
+    display: inline;
+  }
+}
+
+.carousel__story {
+  max-width: 100%;
+  img {
+    object-fit: fill;
+  }
+}

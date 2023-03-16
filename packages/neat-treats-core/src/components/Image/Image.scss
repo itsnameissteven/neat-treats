@@ -1,0 +1,12 @@
+.nt-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 300px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
