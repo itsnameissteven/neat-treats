@@ -1,4 +1,4 @@
-export const filterById = <T extends { id: string }>(
+export const filterById = <T extends { id: string | number }>(
   arr: T[],
   id: string | number,
   isMatch = true

@@ -7,8 +7,6 @@ export type NTImageUploadProps = {
   className?: string;
 };
 
-const imageContainer = ({}) => {};
-
 export const ImageUpload = ({ className = '' }: NTImageUploadProps) => {
   const [files, setFiles] = useState<{ id: string; file: File }[]>([]);
 
