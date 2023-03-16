@@ -1,5 +1,6 @@
 import React from 'react';
 import { icons } from './icons';
+import './Icon.scss';
 
 export type NTIconProps = {
   name: string;
@@ -12,7 +13,7 @@ export type NTIconProps = {
 
 export const Icon = ({
   name,
-  size,
+  size = 16,
   color,
   className = '',
   onClick,
@@ -50,7 +51,7 @@ export const Icon = ({
     return (
       <button
         onClick={onClick}
-        className={`${'nt-icon'} ${className}`}
+        className={`${'nt-icon'} ${`nt-icon-btn`} ${className}`}
         disabled={disabled}
       >
         <CreatedItem />
