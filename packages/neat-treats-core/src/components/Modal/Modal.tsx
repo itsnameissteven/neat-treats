@@ -28,12 +28,11 @@ export const Modal = ({
 
   const modal = (
     <div
-      ref={ref}
       className={classNames('nt-modal-backdrop', {
         'nt-modal-backdrop--out': !isOpen && debouncedIsOpen,
       })}
     >
-      <div className={`nt-modal ${className}`}>
+      <div className={`nt-modal ${className}`} ref={ref}>
         {children}
         <Icon
           className="nt-modal__close-btn"

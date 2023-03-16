@@ -30,17 +30,9 @@
   width: 85px;
   @include boxShaddow(-0.95);
   border: 1px solid $gainsboro;
-  .nt-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .nt-image-thumb {
     width: 65px;
     height: 65px;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
   }
   p {
     font-size: 12px;
@@ -49,6 +41,7 @@
     overflow: hidden;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    word-break: break-all;
   }
   .nt-image-icon {
     position: absolute;
@@ -62,4 +55,9 @@
   grid-template-columns: repeat(auto-fit, 100px);
   gap: 5px;
   row-gap: 15px;
+}
+
+.nt-preview-image {
+  height: 80vh;
+  width: 100%;
 }

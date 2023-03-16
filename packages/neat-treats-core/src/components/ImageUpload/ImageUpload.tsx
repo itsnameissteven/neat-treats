@@ -1,6 +1,8 @@
-import { useState, Suspense, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { filterById } from '../../utils/filterById';
 import { Icon } from '../Icon/Icon';
+import { Image } from '../Image/Image';
+import { Modal } from '../Modal/Modal';
 import './ImageUpload.scss';
 
 type NTFile = { id: string; file: File };
@@ -9,11 +11,14 @@ export type NTImageUploadProps = {
   onChange?: (data: NTFile[]) => unknown;
 };
 
+const defaultPreview = { src: '', name: '', isOpen: false };
+
 export const ImageUpload = ({
   className = '',
   onChange,
 }: NTImageUploadProps) => {
   const [files, setFiles] = useState<NTFile[]>([]);
+  const [previewImage, setPreviewImage] = useState(defaultPreview);
 
   useEffect(() => {
     onChange?.(files);
@@ -55,10 +60,12 @@ export const ImageUpload = ({
       </label>
       <div className="nt-file-upload-selection">
         {srcs.map(({ url, id, name }) => (
-          <button className="nt-image-container" key={id}>
-            <div className="nt-image">
-              <img src={url} alt={name} />
-            </div>
+          <button
+            className="nt-image-container"
+            key={id}
+            onClick={() => setPreviewImage({ src: url, name, isOpen: true })}
+          >
+            <Image className="nt-image-thumb" src={url} alt={name} />
             <p>{name}</p>
             <Icon
               className="nt-image-icon"
@@ -69,6 +76,16 @@ export const ImageUpload = ({
           </button>
         ))}
       </div>
+      <Modal
+        isOpen={previewImage.isOpen}
+        onClose={() => setPreviewImage((prev) => ({ ...prev, isOpen: false }))}
+      >
+        <Image
+          className="nt-preview-image"
+          src={previewImage.src}
+          alt={previewImage.name}
+        />
+      </Modal>
     </div>
   );
 };
