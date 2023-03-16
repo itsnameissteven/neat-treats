@@ -58,10 +58,10 @@ $tablet-width: 1024px;
 }
 
 @mixin fadeIn($time: 200ms) {
-  animation: fadeIn $time ease-in;
+  animation: fadeIn $time ease-in forwards;
 }
 @mixin fadeOut($time: 200ms) {
-  animation: fadeOut $time ease-in;
+  animation: fadeOut $time ease-in forwards;
 }
 
 @mixin boxShaddow($opacity: -0.8) {

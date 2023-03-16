@@ -1,0 +1,21 @@
+@use '../../styles/' as *;
+.nt-modal-backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.313);
+  height: 100vh;
+  width: 100%;
+  @include fadeIn;
+  &--out {
+    @include fadeOut;
+  }
+}
+
+.nt-modal {
+  padding: 12px 8px;
+  height: fit-content;
+  width: fit-content;
+  background-color: #fff;
+}
