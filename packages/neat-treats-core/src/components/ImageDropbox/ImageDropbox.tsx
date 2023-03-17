@@ -65,10 +65,17 @@ export const ImageDropbox = ({
       </label>
       <div className="nt-image-dropbox-selection">
         {srcs.map(({ url, id, name }) => (
-          <button
+          <div
+            role="button"
             className="nt-image-container"
             key={id}
             onClick={() => setPreviewImage({ src: url, name, isOpen: true })}
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key !== 'Enter') return;
+              e.preventDefault();
+              setPreviewImage({ src: url, name, isOpen: true });
+            }}
           >
             <Image className="nt-image-thumb" src={url} alt={name} />
             <p>{name}</p>
@@ -81,13 +88,14 @@ export const ImageDropbox = ({
                 setFiles((el) => filterById(el, id, false));
               }}
             />
-          </button>
+          </div>
         ))}
       </div>
       <Modal
         isOpen={previewImage.isOpen}
         onClose={() => setPreviewImage((prev) => ({ ...prev, isOpen: false }))}
       >
+        <button>hey</button>
         <Image
           className="nt-preview-image"
           src={previewImage.src}
