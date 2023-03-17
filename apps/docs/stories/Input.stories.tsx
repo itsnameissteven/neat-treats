@@ -14,4 +14,5 @@ Default.args = {
   isError: false,
   label: 'Label for your input',
   placeholder: 'Enter in your data',
+  required: false,
 };

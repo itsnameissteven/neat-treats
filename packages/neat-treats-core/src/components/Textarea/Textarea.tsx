@@ -1,5 +1,5 @@
 import React, { useId } from 'react';
-import { Element } from '../..';
+import { Element, Label } from '../..';
 import { classNames } from '@neat-treats/utils';
 import './Textarea.scss';
 
@@ -23,7 +23,11 @@ export const Textarea = React.memo(
       const id = useId();
       return (
         <div className={`nt-textarea-container  ${className}`}>
-          {label && <label htmlFor={props?.id || id}>{label}</label>}
+          <Label
+            htmlFor={props?.id || id}
+            required={props.required}
+            label={label}
+          />
           <Element
             as="textarea"
             {...props}

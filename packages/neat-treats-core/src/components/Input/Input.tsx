@@ -1,6 +1,6 @@
 import { classNames } from '@neat-treats/utils';
 import React, { forwardRef, useId } from 'react';
-import { Element } from '../..';
+import { Element, Label } from '../..';
 import './Input.scss';
 
 export type NTInputProps = GenericComponentProps<'input'> & {
@@ -18,7 +18,11 @@ export const Input = React.memo(
       const id = useId();
       return (
         <div className={`nt-input-container ${className}`}>
-          {label && <label htmlFor={props?.id || id}>{label}</label>}
+          <Label
+            htmlFor={props?.id || id}
+            required={props.required}
+            label={label}
+          />
           <Element
             ref={ref}
             {...props}

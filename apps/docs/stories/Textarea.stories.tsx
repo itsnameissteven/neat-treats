@@ -14,6 +14,7 @@ const Template: ComponentStory<typeof Textarea> = (args) => (
 export const Default: ComponentStory<typeof Textarea> = Template.bind({});
 Default.args = {
   isError: false,
-  label: 'Label for your input',
-  placeholder: 'Enter in your data',
+  label: 'Describe your issue',
+  placeholder: 'Begin typing...',
+  required: false,
 };
