@@ -1,0 +1,25 @@
+.nt-switch {
+  position: relative;
+  border-radius: 500px;
+  background: black;
+  width: 40px;
+  height: 20px;
+  outline: 2.4px solid black;
+
+  &__ball {
+    position: absolute;
+    top: 0px;
+    width: 50%;
+    background: white;
+    border-radius: 500px;
+    transition: all 0.2s ease-out;
+
+    &--off {
+      transform: translateX(-50%);
+    }
+
+    &--on {
+      transform: translateX(50%);
+    }
+  }
+}
