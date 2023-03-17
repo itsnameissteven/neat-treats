@@ -1,6 +1,7 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { usePreventAnimation } from '@neat-treats/utils';
 import { Icon } from '../Icon/Icon';
+import { icons } from '../Icon/icons';
 import './ActionButton.scss';
 
 export type NTActionButtonProps = {
@@ -10,7 +11,7 @@ export type NTActionButtonProps = {
   border?: string;
   activeBorder?: string;
   animationDirection?: 'up' | 'down' | 'left' | 'right';
-  iconName?: string;
+  iconName?: PascalToKebab<keyof typeof icons>;
   iconSize?: number;
   className?: string;
   children?: JSX.Element | string;
@@ -23,7 +24,7 @@ export const ActionButton = ({
   activeBorder = 'black',
   animationDirection,
   children,
-  iconName = '',
+  iconName = 'arrow-right',
   iconSize,
   className = '',
   onClick,
