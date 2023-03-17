@@ -1,0 +1,14 @@
+.loader {
+  animation: spin 2s linear infinite;
+  max-height: fit-content;
+  display: flex;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

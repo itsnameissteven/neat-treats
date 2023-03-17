@@ -40,4 +40,5 @@ export {
 export { Image, type NTImageProps } from './components/Image/Image';
 export { Modal, type NTModalProps } from './components/Modal/Modal';
 export { Switch, type NTSwitchProps } from './components/Switch/Switch';
+export { Loader, type NTLoaderProps } from './components/Loader/Loader';
 export { FocusTrap } from './components/FocusTrap/FocusTrap';
