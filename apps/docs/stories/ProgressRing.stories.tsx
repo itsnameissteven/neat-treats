@@ -13,10 +13,10 @@ const Template = (args) => {
 
 export const Primary = Template.bind({});
 Primary.args = {
-  percentageComplete: 25,
-  size: 70,
-  stroke: 3,
+  percentageComplete: 40,
+  size: 80,
+  stroke: 5,
   hasPercentageDisplay: true,
-  border: '#ade8f4',
-  completedBorder: '#0077b6',
+  border: '#0096c7',
+  completedBorder: '#023e8a',
 };

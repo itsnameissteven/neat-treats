@@ -1,8 +1,9 @@
 @use '../../styles/' as *;
-.nt-file-upload-container {
+
+.nt-image-dropbox-container {
   width: 500px;
 }
-.nt-file-upload {
+.nt-image-dropbox {
   border: 2px dashed rgba(96, 96, 96, 0.362);
   display: flex;
   justify-content: center;
@@ -30,6 +31,9 @@
   width: 85px;
   @include boxShaddow(-0.95);
   border: 1px solid $gainsboro;
+  &:hover {
+    cursor: pointer;
+  }
   .nt-image-thumb {
     width: 65px;
     height: 65px;
@@ -49,7 +53,7 @@
     right: -3px;
   }
 }
-.nt-file-upload-selection {
+.nt-image-dropbox-selection {
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, 100px);

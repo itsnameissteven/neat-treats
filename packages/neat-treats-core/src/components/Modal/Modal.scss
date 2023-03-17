@@ -1,4 +1,5 @@
 @use '../../styles/' as *;
+
 .nt-modal-backdrop {
   top: 0;
   left: 0;
@@ -29,5 +30,6 @@
     position: absolute;
     top: 1px;
     right: 1px;
+    border-radius: 50px;
   }
 }
