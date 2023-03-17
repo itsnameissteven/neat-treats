@@ -1,7 +1,7 @@
 import { classNames, useDebounce } from '@neat-treats/utils';
-import { useOnOutsideClick } from '@neat-treats/utils/src';
+import { useBodyLock, useOnOutsideClick } from '@neat-treats/utils/src';
 import React, { useEffect, useRef, useState } from 'react';
-import { createPortal } from 'react-dom';
+import { Portal } from '../Portal/Portal';
 import { FocusTrap } from '../FocusTrap/FocusTrap';
 import { Icon } from '../Icon/Icon';
 import './Modal.scss';
@@ -21,6 +21,7 @@ export const Modal = ({
   onClose,
   isDebounceClosed = true,
 }: NTModalProps) => {
+  useBodyLock(isOpen);
   const ref = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const debouncedIsOpen = useDebounce(isOpen, isDebounceClosed ? 300 : 0);
@@ -44,26 +45,27 @@ export const Modal = ({
 
   if (!isOpen && !debouncedIsOpen) return null;
 
-  return createPortal(
-    <FocusTrap>
-      <div
-        className={classNames('nt-modal-backdrop', {
-          'nt-modal-backdrop--out': !isOpen && debouncedIsOpen,
-        })}
-        tabIndex={-1}
-      >
-        <div className={`nt-modal ${className}`} ref={ref}>
-          <Icon
-            ref={buttonRef}
-            className="nt-modal__close-btn"
-            name="x"
-            onClick={handleClose}
-            size={20}
-          />
-          {children}
+  return (
+    <Portal container={document.body}>
+      <FocusTrap>
+        <div
+          className={classNames('nt-modal-backdrop', {
+            'nt-modal-backdrop--out': !isOpen && debouncedIsOpen,
+          })}
+          tabIndex={-1}
+        >
+          <div className={`nt-modal ${className}`} ref={ref}>
+            <Icon
+              ref={buttonRef}
+              className="nt-modal__close-btn"
+              name="x"
+              onClick={handleClose}
+              size={20}
+            />
+            {children}
+          </div>
         </div>
-      </div>
-    </FocusTrap>,
-    document.body
+      </FocusTrap>
+    </Portal>
   );
 };
