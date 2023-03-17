@@ -34,9 +34,9 @@ export { Select, type NTSelectProps } from './components/Select/Select';
 export { Spacer, type NTSpacerProps } from './components/Spacer/Spacer';
 export { Textarea, type NTTextareaProps } from './components/Textarea/Textarea';
 export {
-  ImageUpload,
-  type NTImageUploadProps,
-} from './components/ImageUpload/ImageUpload';
+  ImageDropbox,
+  type NTImageDropboxProps,
+} from './components/ImageDropbox/ImageDropbox';
 export { Image, type NTImageProps } from './components/Image/Image';
 export { Modal, type NTModalProps } from './components/Modal/Modal';
 export { Switch, type NTSwitchProps } from './components/Switch/Switch';

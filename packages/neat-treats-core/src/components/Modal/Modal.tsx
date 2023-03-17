@@ -1,10 +1,10 @@
-import { useDebounce } from '@neat-treats/utils';
-import React, { useRef } from 'react';
+import { classNames, useDebounce } from '@neat-treats/utils';
+import { useOnOutsideClick } from '@neat-treats/utils/src';
+import React, { useEffect, useMemo, useRef } from 'react';
 import { createPortal } from 'react-dom';
-import { classNames } from '@neat-treats/utils';
 import { Icon } from '../Icon/Icon';
 import './Modal.scss';
-import { useOnOutsideClick } from '@neat-treats/utils/src';
+
 export type NTModalProps = {
   className?: string;
   children: React.ReactNode;
@@ -21,8 +21,14 @@ export const Modal = ({
   isDebounceClosed = true,
 }: NTModalProps) => {
   const ref = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const debouncedIsOpen = useDebounce(isOpen, isDebounceClosed ? 300 : 0);
-  useOnOutsideClick(ref, onClose);
+
+  const handleClose = () => {
+    onClose();
+  };
+
+  useOnOutsideClick(ref, handleClose);
 
   if (!isOpen && !debouncedIsOpen) return null;
 
@@ -35,9 +41,10 @@ export const Modal = ({
       <div className={`nt-modal ${className}`} ref={ref}>
         {children}
         <Icon
+          ref={buttonRef}
           className="nt-modal__close-btn"
           name="x"
-          onClick={onClose}
+          onClick={handleClose}
           size={20}
         />
       </div>
