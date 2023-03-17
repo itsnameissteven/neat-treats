@@ -3,7 +3,7 @@
   border-radius: 100%;
   width: fit-content;
   p {
-    margin: 0
+    margin: 0;
   }
   &__ring {
     transform: rotate(-90deg);
@@ -14,7 +14,6 @@
   }
 
   &__content {
-    color: #fff;
     position: absolute;
     font-weight: 500;
     top: 50%;

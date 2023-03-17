@@ -11,14 +11,16 @@ export type NTImageDropboxProps = {
   onChange?: (data: NTFile[]) => unknown;
 };
 
-const defaultPreview = { src: '', name: '', isOpen: false };
-
 export const ImageDropbox = ({
   className = '',
   onChange,
 }: NTImageDropboxProps) => {
   const [files, setFiles] = useState<NTFile[]>([]);
-  const [previewImage, setPreviewImage] = useState(defaultPreview);
+  const [previewImage, setPreviewImage] = useState({
+    src: '',
+    name: '',
+    isOpen: false,
+  });
 
   useEffect(() => {
     onChange?.(files);
@@ -95,7 +97,6 @@ export const ImageDropbox = ({
         isOpen={previewImage.isOpen}
         onClose={() => setPreviewImage((prev) => ({ ...prev, isOpen: false }))}
       >
-        <button>hey</button>
         <Image
           className="nt-preview-image"
           src={previewImage.src}
