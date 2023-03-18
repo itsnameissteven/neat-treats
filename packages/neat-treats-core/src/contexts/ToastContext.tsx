@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useState } from 'react';
-
-const ToastContext = createContext<
+import { ToastContainer } from '../components/ToastContainer/ToastContainer';
+export const ToastContext = createContext<
   React.Dispatch<React.SetStateAction<string[]>>
 >(() => null);
 
@@ -13,6 +13,9 @@ export const ToastContextProvider = ({
 }: NTToastContextProviderdProps) => {
   const [toasts, setToasts] = useState<string[]>([]);
   return (
-    <ToastContext.Provider value={setToasts}>{children}</ToastContext.Provider>
+    <ToastContext.Provider value={setToasts}>
+      {children}
+      <ToastContainer toasts={toasts} />
+    </ToastContext.Provider>
   );
 };
