@@ -1,10 +1,10 @@
-import { NTToastPositions } from '../../contexts/ToastContext';
+import { NTToastPositions, type NTToast } from '../../contexts/ToastContext';
 import { Portal } from '../Portal/Portal';
 import { Toast } from '../Toast/Toast';
 import './ToastContainer.scss';
 export type NTToastContainerProps = {
   className?: string;
-  toasts: string[];
+  toasts: NTToast[];
 };
 
 const positions: NTToastPositions[] = [
@@ -24,7 +24,13 @@ export const ToastContainer = ({
     <Portal container={document.body}>
       <div className={`nt-toast-container ${className}`}>
         {positions.map((position) => (
-          <div className={`nt-toast-container--${position}`}>{position}</div>
+          <div className={`nt-toast-container--${position}`}>
+            {toasts.reduce((acc: JSX.Element[], curr) => {
+              if (curr.position === position)
+                return [...acc, <Toast content={curr.id} key={curr.id} />];
+              return acc;
+            }, [])}
+          </div>
         ))}
         {/* {toasts.map((el, i) => (
           <Toast content={el} key={i} />

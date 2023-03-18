@@ -24,7 +24,11 @@ const Container = ({ children }: { children: React.ReactNode }) => {
 
 const Example = () => {
   const toast = useToast();
-  return <Button onClick={() => toast('I am a toast')}>Click to toast</Button>;
+  return (
+    <Button onClick={() => toast({ msg: 'I am a toast' })}>
+      Click to toast
+    </Button>
+  );
 };
 
 const Template = () => {

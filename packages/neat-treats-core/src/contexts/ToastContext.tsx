@@ -1,8 +1,8 @@
-import { createContext, ReactNode, useState } from 'react';
+import { createContext, ReactNode, useEffect, useState } from 'react';
 import { ToastContainer } from '../components/ToastContainer/ToastContainer';
 
 export const ToastContext = createContext<
-  React.Dispatch<React.SetStateAction<string[]>>
+  React.Dispatch<React.SetStateAction<NTToast[]>>
 >(() => null);
 
 export type NTToastContextProviderdProps = {
@@ -15,12 +15,13 @@ export type NTToast = {
   msg: string;
   id: string;
   position: NTToastPositions;
+  time: number;
 };
 
 export const ToastContextProvider = ({
   children,
 }: NTToastContextProviderdProps) => {
-  const [toasts, setToasts] = useState<string[]>([]);
+  const [toasts, setToasts] = useState<NTToast[]>([]);
   return (
     <ToastContext.Provider value={setToasts}>
       {children}
