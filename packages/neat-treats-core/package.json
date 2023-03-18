@@ -1,6 +1,6 @@
 {
   "name": "@neat-treats/core",
-  "version": "0.0.02-beta",
+  "version": "0.0.2-beta",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

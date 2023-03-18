@@ -12,7 +12,8 @@
     "@neat-treats/core": "workspace:*",
     "core": "link:@types@neat-treats/core",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "storybook-react-context": "^0.6.0"
   },
   "devDependencies": {
     "@neat-treats/tsconfig": "workspace:*",

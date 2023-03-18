@@ -13,8 +13,8 @@ export const ToastContainer = ({
   return (
     <Portal container={document.body}>
       <div className={`nt-toast-container ${className}`}>
-        {toasts.map((el) => (
-          <Toast content={el} />
+        {toasts.map((el, i) => (
+          <Toast content={el} key={i} />
         ))}
       </div>
     </Portal>

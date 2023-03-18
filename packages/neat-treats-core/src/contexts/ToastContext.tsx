@@ -12,6 +12,7 @@ export const ToastContextProvider = ({
   children,
 }: NTToastContextProviderdProps) => {
   const [toasts, setToasts] = useState<string[]>([]);
+  console.log(toasts);
   return (
     <ToastContext.Provider value={setToasts}>
       {children}
