@@ -1,0 +1,33 @@
+.nt-toast-container {
+  position: fixed;
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  & > * {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &--bottom-right,
+  &--bottom-center,
+  &--bottom-left {
+    flex-direction: column-reverse;
+  }
+  &--bottom-left,
+  &--top-left {
+    justify-self: flex-start;
+  }
+  &--bottom-center,
+  &--top-center {
+    justify-self: center;
+  }
+}

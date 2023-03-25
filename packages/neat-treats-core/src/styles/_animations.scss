@@ -126,3 +126,41 @@
     opacity: 0;
   }
 }
+
+@keyframes scaleUpFadeInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(100px);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1) translateX(0px);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1) translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes scaleDownFadeInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(-100px);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1) translateX(0px);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1) translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}

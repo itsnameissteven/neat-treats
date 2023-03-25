@@ -43,3 +43,6 @@ type Kebab<
 type PascalToKebab<T extends string> = T extends `${infer First}${infer Rest}`
   ? Kebab<`${Lowercase<First>}${Rest}`>
   : Kebab<T>;
+
+type XPositions = 'left' | 'center' | 'right';
+type YPositions = 'top' | 'bottom';
