@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { isNode } from './isNode';
 export const useOnOutsideClick = <T extends HTMLElement>(
   ref: React.RefObject<T>,
-  handler: any
+  handler: (event: MouseEvent | TouchEvent) => unknown
 ) => {
   const callbackRef = useRef(handler);
   const callback = callbackRef.current;

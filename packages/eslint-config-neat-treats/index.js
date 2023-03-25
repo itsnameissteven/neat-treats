@@ -30,14 +30,15 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/no-unescaped-entities': 'off',
+    'react/prop-types': 'off',
     'prettier/prettier': 'warn',
     '@typescript-eslint/ban-ts-comment': 'off',
   },
-  parserOptions: {
-    babelOptions: {
-      presets: [require.resolve('next/babel')],
-    },
-  },
+  // parserOptions: {
+  //   babelOptions: {
+  //     presets: [require.resolve('next/babel')],
+  //   },
+  // },
   plugins: ['react', 'react-hooks', '@typescript-eslint'],
   settings: {
     react: {

@@ -52,7 +52,7 @@ export const ActionButton = ({
 
     current.style.strokeDasharray = `${0} ${circumference}`;
     current.style.strokeDashoffset = `${circumference}`;
-  }, [circleRef.current]);
+  }, []);
 
   const setProgress = (percent: number) => {
     const { current } = circleRef;
