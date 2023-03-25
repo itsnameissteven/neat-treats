@@ -5,9 +5,9 @@
   font-weight: 400;
   background-color: $blue-green;
   border: 1px solid $retroBlack;
-  padding: 10px 30px;
+  padding: 4px 12px;
+  margin: 0.1rem;
   border-radius: 40px;
-  letter-spacing: 1px;
   transition: all 300ms ease-out;
 
   &:focus-visible {
@@ -15,7 +15,7 @@
     outline-offset: 1px;
   }
   &:hover {
-    transition: all 250ms ease-in;
+    transition: all 250ms ease-out;
     transform: translateY(-0.5px);
     @include boxShaddow(-0.9);
   }

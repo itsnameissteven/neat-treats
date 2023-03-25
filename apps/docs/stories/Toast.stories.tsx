@@ -21,41 +21,63 @@ export default {
 const Container = ({ children }: { children: React.ReactNode }) => {
   return <ToastContextProvider>{children}</ToastContextProvider>;
 };
+const topButtons = [
+  {
+    id: crypto.randomUUID(),
+    controller: { msg: 'Im a Top Left Toast!!!', position: 'top-left' },
+    content: 'Top Left',
+  },
+  {
+    id: crypto.randomUUID(),
+    controller: { msg: 'Im a Top Center Toast!!!', position: 'top-center' },
+    content: 'Top Center',
+  },
+  {
+    id: crypto.randomUUID(),
+    controller: { msg: 'Im a Top Right Toast!!!', position: 'top-right' },
+    content: 'Top Right',
+  },
+] as const;
+
+const bottomButtons = [
+  {
+    id: crypto.randomUUID(),
+    controller: { msg: 'Im a Bottom Left Toast!!!', position: 'bottom-left' },
+    content: 'Bottom Left',
+  },
+  {
+    id: crypto.randomUUID(),
+    controller: {
+      msg: 'Im a Bottom Center Toast!!!',
+      position: 'bottom-center',
+    },
+    content: 'Bottom Center',
+  },
+  {
+    id: crypto.randomUUID(),
+    controller: { msg: 'Im a Bottom Right Toast!!!', position: 'bottom-right' },
+    content: 'Bottom Right',
+  },
+] as const;
 
 const Example = () => {
   const toast = useToast();
   return (
     <div className="toast-btn-container">
-      <Button
-        onClick={() => toast({ msg: 'I am a toast', position: 'top-left' })}
-      >
-        Top Left
-      </Button>
-      <Button
-        onClick={() => toast({ msg: 'I am a toast', position: 'top-center' })}
-      >
-        Top Center
-      </Button>
-      <Button
-        onClick={() => toast({ msg: 'I am a toast', position: 'top-right' })}
-      >
-        Top Right
-      </Button>
-      <Button
-        onClick={() => toast({ msg: 'I am a toast', position: 'bottom-left' })}
-      >
-        Bottom Left
-      </Button>
-      <Button
-        onClick={() =>
-          toast({ msg: 'I am a toast', position: 'bottom-center' })
-        }
-      >
-        Bottom Center
-      </Button>
-      <Button onClick={() => toast({ msg: 'I am a toast' })}>
-        Bottom Right
-      </Button>
+      <div className="toast-btn-top">
+        {topButtons.map((el) => (
+          <Button onClick={() => toast(el.controller)} key={el.id}>
+            {el.content}
+          </Button>
+        ))}
+      </div>
+      <div className="toast-btn-bottom">
+        {bottomButtons.map((el) => (
+          <Button onClick={() => toast(el.controller)} key={el.id}>
+            {el.content}
+          </Button>
+        ))}
+      </div>
     </div>
   );
 };
