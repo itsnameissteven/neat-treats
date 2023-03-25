@@ -33,6 +33,7 @@ module.exports = {
     'react/prop-types': 'off',
     'prettier/prettier': 'warn',
     '@typescript-eslint/ban-ts-comment': 'off',
+    'import/no-anonymous-default-export': 'off',
   },
   // parserOptions: {
   //   babelOptions: {

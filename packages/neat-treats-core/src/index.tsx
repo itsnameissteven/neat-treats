@@ -50,3 +50,7 @@ export {
   type NTToastContainerProps,
 } from './components/ToastContainer/ToastContainer';
 export { Transition } from './components/Transition/Transition';
+export {
+  DNDContainer,
+  type NTDNDContainerProps,
+} from './components/DNDContainer/DNDContainer';
