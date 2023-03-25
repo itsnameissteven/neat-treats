@@ -11,7 +11,7 @@ export const useToast = () => {
     throw new Error('useToast must be used inside ToastContext');
   }
   const toast = useCallback(
-    ({ msg, position = 'bottom-right', time = 3000 }: ToastArgs) => {
+    ({ msg, position = 'bottom-right', time = 5000 }: ToastArgs) => {
       const id = crypto.randomUUID();
       setToast((prev) => [{ msg, position, id, time }, ...prev]);
       setTimeout(() => setToast((prev) => filterById(prev, id, false)), time);

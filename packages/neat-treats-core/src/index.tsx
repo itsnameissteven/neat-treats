@@ -49,3 +49,4 @@ export {
   ToastContainer,
   type NTToastContainerProps,
 } from './components/ToastContainer/ToastContainer';
+export { Transition } from './components/Transition/Transition';

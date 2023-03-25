@@ -2,10 +2,14 @@
 
 .nt-toast {
   display: inline-block;
+  position: relative;
+  flex-grow: 0;
   border: 1px solid rgba(0, 0, 0, 0.571);
   border-radius: 5px;
   min-width: 275px;
   padding: 8px 12px;
   background-color: #72a1e5;
   margin: 0.5em;
+  animation: scaleFadeInOut 5000ms forwards;
+  overflow: hidden;
 }

@@ -1,3 +1,4 @@
+import { Transition } from '../Transition/Transition';
 import './Toast.scss';
 
 export type NTToastProps = {
@@ -7,8 +8,10 @@ export type NTToastProps = {
 
 export const Toast = ({ className, content }: NTToastProps) => {
   return (
-    <div className={`nt-toast ${className}`}>
-      <p>{content}</p>
-    </div>
+    <Transition>
+      <div className={`nt-toast ${className}`}>
+        <p>{content}</p>
+      </div>
+    </Transition>
   );
 };
