@@ -25,9 +25,38 @@ const Container = ({ children }: { children: React.ReactNode }) => {
 const Example = () => {
   const toast = useToast();
   return (
-    <Button onClick={() => toast({ msg: 'I am a toast' })}>
-      Click to toast
-    </Button>
+    <div className="toast-btn-container">
+      <Button
+        onClick={() => toast({ msg: 'I am a toast', position: 'top-left' })}
+      >
+        Top Left
+      </Button>
+      <Button
+        onClick={() => toast({ msg: 'I am a toast', position: 'top-center' })}
+      >
+        Top Center
+      </Button>
+      <Button
+        onClick={() => toast({ msg: 'I am a toast', position: 'top-right' })}
+      >
+        Top Right
+      </Button>
+      <Button
+        onClick={() => toast({ msg: 'I am a toast', position: 'bottom-left' })}
+      >
+        Bottom Left
+      </Button>
+      <Button
+        onClick={() =>
+          toast({ msg: 'I am a toast', position: 'bottom-center' })
+        }
+      >
+        Bottom Center
+      </Button>
+      <Button onClick={() => toast({ msg: 'I am a toast' })}>
+        Bottom Right
+      </Button>
+    </div>
   );
 };
 

@@ -10,6 +10,11 @@
   padding: 8px 12px;
   background-color: #72a1e5;
   margin: 0.5em;
-  animation: scaleFadeInOut 5000ms forwards;
   overflow: hidden;
+  &--bottom {
+    animation: scaleUpFadeInOut 5000ms forwards;
+  }
+  &--top {
+    animation: scaleDownFadeInOut 5000ms forwards;
+  }
 }

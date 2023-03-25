@@ -30,9 +30,16 @@ export const ToastContainer = ({
             className={`nt-toast-container--${position}`}
             key={`${id}-${position}`}
           >
-            {toasts.reduce((acc: JSX.Element[], curr, i) => {
+            {toasts.reduce((acc: JSX.Element[], curr) => {
               if (curr.position === position)
-                return [...acc, <Toast content={curr.id} key={curr.id} />];
+                return [
+                  ...acc,
+                  <Toast
+                    content={curr.msg}
+                    key={curr.id}
+                    position={curr.position}
+                  />,
+                ];
               return acc;
             }, [])}
           </div>

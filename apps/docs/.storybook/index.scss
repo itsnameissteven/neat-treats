@@ -1,3 +1,10 @@
+html,
+body,
+#root {
+  height: 100%;
+  // padding: 0 !important;
+}
+
 .story {
   &__h1 {
     margin: 24px 0;
@@ -93,4 +100,11 @@
   img {
     object-fit: fill;
   }
+}
+.toast-btn-container {
+  border: 2px solid red;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
