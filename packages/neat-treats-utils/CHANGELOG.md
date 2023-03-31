@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- 84ef391: fix missing package
+
+## 0.0.3
+
+### Patch Changes
+
 - 334f92e: Update packages and commands
 
 ## 1.0.0
