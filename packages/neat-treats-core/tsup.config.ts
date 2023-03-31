@@ -12,5 +12,5 @@ export default defineConfig({
   external: ['react'],
   format: ['cjs', 'esm'],
   target: 'es6',
-  entryPoints: ['./src/index.ts'],
+  entryPoints: ['./src/index.tsx'],
 });

@@ -1,6 +1,6 @@
 {
   "name": "@neat-treats/core",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -10,7 +10,7 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "build": "tsup",
     "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
     "lint": "eslint \"src/**/**/*.ts*\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
@@ -19,22 +19,22 @@
     "@neat-treats/tsconfig": "workspace:*",
     "@neat-treats/utils": "workspace:*",
     "@types/prismjs": "^1.26.0",
-    "@types/react": "^18.0.9",
-    "@types/react-dom": "^18.0.4",
     "eslint": "^8.15.0",
     "eslint-config-neat-treats": "workspace:*",
-    "react": "^18.1.0",
     "tsup": "^6.5.0",
-    "typescript": "^4.5.3"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "dependencies": {
+    "typescript": "^4.5.3",
     "esbuild-sass-plugin": "^2.6.0",
     "postcss": "^8.4.21",
     "prismjs": "^1.29.0",
     "sass": "^1.58.3",
     "sass-loader": "^13.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "react": "^18.1.0",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4"
   }
 }
