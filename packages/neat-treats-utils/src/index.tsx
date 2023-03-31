@@ -8,3 +8,4 @@ export { useLocalStorage } from './useLocalStorage';
 export { useOnOutsideClick } from './useOnOutsideClick';
 export { usePreventAnimation } from './usePreventAnimation';
 export { usePrevious } from './usePrevious';
+export { useDynamicRefs } from './useDynamicRefs';

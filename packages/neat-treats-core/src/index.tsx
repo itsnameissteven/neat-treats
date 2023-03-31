@@ -54,3 +54,4 @@ export {
   DNDContainer,
   type NTDNDContainerProps,
 } from './components/DNDContainer/DNDContainer';
+export { setComponentRefs } from './utils/setComponentRefs';
