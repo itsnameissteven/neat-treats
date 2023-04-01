@@ -1,0 +1,14 @@
+version: '3'
+services:
+  docs:
+    build:
+      context: .
+      dockerfile: ./apps/docs/Dockerfile
+    ports:
+      - '3030:3000'
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: '0.50'
+    #       memory: 10M
+    restart: always
